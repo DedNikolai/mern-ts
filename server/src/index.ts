@@ -1,13 +1,12 @@
 import express, { Request, Response } from 'express';
 import mongoose from 'mongoose';
-import Deck from './models/Deck'
+import Deck from './models/Deck';
+import 'dotenv/config';
 
 const Port = 5000;
 
 const app = express();
 app.use(express.json());
-
-mongoose.connect('mongodb+srv://DedNikolai:As541035@cluster0.ez3irsp.mongodb.net/mern-ts?retryWrites=true&w=majority')
 
 app.post('/decks', async (req: Request, res: Response) => {
     try {
@@ -22,9 +21,7 @@ app.post('/decks', async (req: Request, res: Response) => {
 
 })
 
-mongoose.connect(
-    'mongodb+srv://DedNikolai:As541035@cluster0.ez3irsp.mongodb.net/mern-ts?retryWrites=true&w=majority'
-    ).then(() => {
+mongoose.connect(process.env.MONGO_URL).then(() => {
         console.log(`Listening Port ${Port}`)
         app.listen(Port);
     })
