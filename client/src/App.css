@@ -1,10 +1,3 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +32,77 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.app {
+  /* display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; */
+  margin-top: 30px;
+  font-size: 26px;
+  color: aliceblue;
+}
+
+.decks, .cards {
+  display: flex;
+  justify-content: center;
+  width: 700px;
+  margin: 0 auto;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.decks li, .cards li {
+  position: relative;
+  margin: 5px 10px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid aliceblue;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 200px;
+  background-color: aliceblue;
+  color: cadetblue;
+}
+
+.decks li button, .cards li button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.decks li:hover {
+  background-color: azure;
+  cursor: pointer;
+}
+
+#deck-title, #card-text {
+  margin: 0 10px;
+  width: 200px;
+  height: 30px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  height: 80px;
+  padding: 20px;
+  font-size: 26px;
+  color: aliceblue;
+}
+
+h1 {
+  color: aliceblue;
+  margin: 0;
 }
